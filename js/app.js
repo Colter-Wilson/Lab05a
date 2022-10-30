@@ -8,14 +8,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
-  let sum = a+b;
-  return [sum, `The sum of ${a} and ${b} is ${sum}.`];
+// function sum(a, b) { //eslint-disable-line
+  // let sum = a+b;
+  // return [sum, `The sum of ${a} and ${b} is ${sum}.`];
 
-}
+// }
 
 // Here is the test for sum(); uncomment it to run it
- testSum(4, 7);
+//  testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -28,14 +28,14 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
-  let product = a*b;
-  return [product, `The product of ${a} and ${b} is ${product}.`];
+// function multiply(a, b) { //eslint-disable-line
+  // let product = a*b;
+  // return [product, `The product of ${a} and ${b} is ${product}.`];
 
-}
+// }
 
 // Here is the test for multiply(); uncomment it to run it
- testMultiply(5,9);
+//  testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -51,20 +51,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let add = sum(a, b)[0];
-  let finalSum = sum(c, add)[0];
-  let product = multiply(a, b)[0];
-  let finalProduct = multiply(c, product)[0];
+// function sumAndMultiply(a, b, c) { //eslint-disable-line
+  // let add = sum(a, b)[0];
+  // let finalSum = sum(c, add)[0];
+  // let product = multiply(a, b)[0];
+  // let finalProduct = multiply(c, product)[0];
   
-  let answer = [finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${finalSum}.`, `The product of ${a} and ${b} and ${c} is ${finalProduct}.`]
+  // let answer = [finalSum, finalProduct, `${a} and ${b} and ${c} sum to ${finalSum}.`, `The product of ${a} and ${b} and ${c} is ${finalProduct}.`]
 
-  return answer;
+  // return answer;
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
- testSumAndMultiply(4,7,5);
+//  testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -79,16 +79,36 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4]; 
 
-function sumArray(sumArr) { //eslint-disable-line
-
-
+function sumArray(sumArr) {
+  for (let i = 0; i < sumArr.length; i++) {
+    let firstSum = sum(sumArr[0], sumArr[1]);
+    let finalSum = sum(firstSum[0], sumArr[2]);
+    let answer = [finalSum[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in an array of numbers and ${finalSum[0]} is their sum.`];
+    return answer;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+//  testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -103,19 +123,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-  finalProduct = multiply(c, product)[0];
+// function multiplyArray(multArr) { //eslint-disable-line
+  // let productOne = multiply(multArr[0], multArr[1])[0];
+  // let productTwo = multiply(productOne, multArr[2])[0];
+ 
 
-  let answerFive = [finalProduct, `The numbers ${a}, ${b}, ${c} have a product of finalProduct`]
+  // let answerFive = [productTwo, `The numbers ${multArr} have a product of ${productTwo}.`]
 
-  return answerFive;
+  // return answerFive;
 
 
 
-}
+
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
- testMultiplyArray(testArray);
+//  testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
