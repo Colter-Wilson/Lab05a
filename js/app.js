@@ -83,7 +83,7 @@ let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
   let ogSum = sum(sumArr[0], sumArr[1])[0];
-  let arraySum = sum(ogSum [0], sumArr[2])[0];
+  let arraySum = sum(ogSum, sumArr[2])[0];
 
   let answerFour = [arraySum, `${sumArr} was passed in as an array of numbers, and ${arraySum} is their sum.`]
 
